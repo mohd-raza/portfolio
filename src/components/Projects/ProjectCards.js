@@ -25,7 +25,12 @@ function ProjectCards(props) {
           </Card.Text>
         )}
         {props.SrcLink ? (
-          <Button variant="primary" href={props.SrcLink} target="_blank">
+          <Button
+            variant="primary"
+            href={props.SrcLink}
+            target="_blank"
+            className="button-resp"
+          >
             <AiFillCode
               style={{
                 fontSize: "20px",

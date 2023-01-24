@@ -36,7 +36,12 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ marginTop: "-60px" }}>
+            <Col
+              // sm={6}
+              md={5}
+              // style={{ marginTop: "-60px" }}
+              className="img-column"
+            >
               <img src={img1} alt="home pic" className="img-fluid" />
             </Col>
           </Row>

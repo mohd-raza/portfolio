@@ -38,7 +38,7 @@ function Techstack() {
         <SiMysql />,
         <SiPostman />,
       ].map((tool) => (
-        <Col xs={4} md={2} className="tech-icons">
+        <Col xs={4} md={2} className="tech-icons" id={tool}>
           {tool}
         </Col>
       ))}

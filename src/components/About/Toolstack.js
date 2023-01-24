@@ -7,7 +7,7 @@ function Toolstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       {[<SiLinux />, <SiGit />, <SiVisualstudiocode />, <SiDocker />].map(
         (tool) => (
-          <Col xs={4} md={2} className="tech-icons">
+          <Col xs={4} md={2} className="tech-icons" id={tool}>
             {tool}
           </Col>
         )

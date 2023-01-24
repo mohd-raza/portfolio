@@ -3,8 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { MdOutlineArticle, MdOutlineCastForEducation } from "react-icons/md";
-import { FcDocument } from "react-icons/fc";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -33,9 +31,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-        </Navbar.Brand>
+        <Navbar.Brand href="/" className="d-flex"></Navbar.Brand>
 
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -75,39 +71,6 @@ function NavBar() {
                   style={{ marginBottom: "3px", marginRight: "3px" }}
                 />
                 Projects
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/education"
-                onClick={() => updateExpanded(false)}
-              >
-                <MdOutlineCastForEducation
-                  style={{ marginBottom: "3px", marginRight: "3px" }}
-                />
-                Education
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/blog"
-                onClick={() => updateExpanded(false)}
-              >
-                <MdOutlineArticle
-                  style={{ marginBottom: "3px", marginRight: "3px" }}
-                />
-                Blog
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} onClick={() => updateExpanded(false)}>
-                <FcDocument
-                  style={{ marginBottom: "3px", marginRight: "3px" }}
-                />
-                Resume
               </Nav.Link>
             </Nav.Item>
           </Nav>
