@@ -45,22 +45,24 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto" defaultActiveKey="#home">
+            {/* Home */}
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "3px" }} /> Home
               </Nav.Link>
             </Nav.Item>
-
+            {/* About */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "3px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "3px" }} />
+                About
               </Nav.Link>
             </Nav.Item>
-
+            {/* Project */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
