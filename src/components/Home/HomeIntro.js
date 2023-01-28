@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Img from "../../assets/profile.jpg";
-import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiFillMail,
@@ -53,9 +52,14 @@ function HomeIntro() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={Img} className="img-fluid" alt="avatar" />
-            </Tilt>
+            {/* <Tilt> */}
+            <img
+              src={Img}
+              className="img-fluid"
+              alt="avatar"
+              style={{ borderRadius: "1rem" }}
+            />
+            {/* </Tilt> */}
           </Col>
         </Row>
         <Row>

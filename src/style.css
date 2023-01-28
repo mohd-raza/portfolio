@@ -13,7 +13,13 @@ html {
 .text-highlight {
   color: var(--imp-text-color) !important;
 }
-
+#brand {
+  color: var(--imp-text-color) !important;
+  font-weight: 700;
+}
+#nav-top {
+  margin-top: 5px;
+}
 button:focus {
   box-shadow: none !important;
 }
@@ -612,4 +618,9 @@ button:focus {
   .about-img {
     padding-top: 0 !important;
   }
+}
+
+/* Experience */
+.experience-cont {
+  margin-top: 6rem;
 }

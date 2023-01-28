@@ -3,6 +3,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import { CgFileDocument } from "react-icons/cg";
+import { FaLaptopCode } from "react-icons/fa";
+import { TbSchool } from "react-icons/tb";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -31,7 +34,16 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex"></Navbar.Brand>
+        <Navbar.Brand
+          href="/"
+          className="d-flex"
+          style={{
+            fontSize: "2rem",
+          }}
+          id="brand"
+        >
+          Mohammed Raza
+        </Navbar.Brand>
 
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -44,10 +56,15 @@ function NavBar() {
           <span />
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto" defaultActiveKey="#home">
+          <Nav className="mx-auto" defaultActiveKey="#home" id="nav-top">
             {/* Home */}
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/"
+                onClick={() => updateExpanded(false)}
+                className="nav-text"
+              >
                 <AiOutlineHome style={{ marginBottom: "3px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -57,6 +74,7 @@ function NavBar() {
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
+                className="nav-text"
               >
                 <AiOutlineUser style={{ marginBottom: "3px" }} />
                 About
@@ -68,11 +86,52 @@ function NavBar() {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                className="nav-text"
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "3px", marginRight: "3px" }}
                 />
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+            {/* Experience */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+                className="nav-text"
+              >
+                <FaLaptopCode
+                  style={{ marginBottom: "3px", marginRight: "3px" }}
+                />
+                Experience
+              </Nav.Link>
+            </Nav.Item>
+            {/* Education */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/education"
+                onClick={() => updateExpanded(false)}
+                className="nav-text"
+              >
+                <TbSchool style={{ marginBottom: "3px", marginRight: "3px" }} />
+                Education
+              </Nav.Link>
+            </Nav.Item>
+            {/* Resume */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+                className="nav-text"
+              >
+                <CgFileDocument
+                  style={{ marginBottom: "3px", marginRight: "3px" }}
+                />
+                Resume
               </Nav.Link>
             </Nav.Item>
           </Nav>
